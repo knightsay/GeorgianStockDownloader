@@ -1,0 +1,4 @@
+url <- "http://www.gse.ge/Stocks/data3.asp?Code=WINE"
+
+
+tables <- readHTMLTable(url, header = T, trim = T,as.data.frame = T)[[5]]
