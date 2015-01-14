@@ -4,6 +4,7 @@
 #' 
 #' @param ID the data frame of stock IDs that we want trade results of.
 #'            The data frame should contain only one column of symbols
+#' @param export boolean value of whether to export the data to a csv file
 #'   
 #' @return data frame containing the trade results of different stock issues from every day 
 #'         available on the website. 
@@ -14,7 +15,7 @@
 #' stocks = data.frame(ID = c("AGVQ", "AKAT"))
 #' download.multi.stock.trade(ID = stocks) 
 
-download.multi.stock.trade <- function(ID){
+download.multi.stock.trade <- function(ID, export = FALSE){
   
   result.table = data.frame()
   
@@ -23,5 +24,10 @@ download.multi.stock.trade <- function(ID){
     temp <- cbind(ID = ID[i, 1], temp)
     result.table = rbind(result.table, temp)
   }
+  
+  if(export == TRUE){
+    write.csv(result.table, "MultiStocks_trade_result.csv")
+  }
+  
   return(result.table)
 }

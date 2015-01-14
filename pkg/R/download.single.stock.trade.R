@@ -3,6 +3,7 @@
 #' \code{download.single.stock.trade} takes a stock ID and returns a data frame of its trade result
 #' 
 #' @param ID the single stock ID that we want trade results of
+#' @param export boolean value of whether to export the data to a csv file
 #'   
 #' @return data frame containing the trade results of different stock issues from every day 
 #'         available on the website. 
@@ -12,7 +13,7 @@
 #' @examples
 #' download.single.stock.trade(ID = "AGVQ") 
 
-download.single.stock.trade <- function(ID){
+download.single.stock.trade <- function(ID, export = FALSE){
   
   ## remember to put sep = "", otherwise default by adding extra space
   stock.URL    <- paste("http://www.gse.ge/Stocks/data3.asp?Code=", ID, sep = "")
@@ -46,7 +47,11 @@ download.single.stock.trade <- function(ID){
                            "Volume in GEL")
   
   ## change Date format and type to Date type
-  newdate = strptime(as.character(result.table$Date), "%d/%m/%y")
+  result.table$Date = strptime(as.character(result.table$Date), "%d/%m/%y")
+  
+  if(export == TRUE){
+    write.csv(result.table, paste(ID, "_trade_result.csv", sep = ""))
+  }
   
   return(result.table)
 }
