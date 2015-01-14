@@ -9,7 +9,8 @@ Depends:
 Imports:
     XML,
     testthat,
-    xts
+    xts,
+    quantmod
 Maintainer: Zijie Zhu <Zijie.Zhu@williams.edu>
 License: GPL (>= 2)
 Description: GeorgianStockParser package offers tools to download market data of stocks issued in

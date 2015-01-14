@@ -1,5 +1,4 @@
 
 exportPattern("^[[:alpha:]]+")
 
-import(XML, testthat, xts)
-  
+import(XML, testthat, xts, quantmod)  
