@@ -32,11 +32,13 @@ download.single.stock.trade <- function(ID, export = FALSE){
     result.table[, 8] <- as.numeric(gsub(",","", result.table[, 8]))
     result.table[, 9] <- as.numeric(gsub(",","", result.table[, 9]))
     
-    ## convert to correct numeric type
+    ## convert to correct numeric type;
     for(i in 3:6){
       result.table[, i] <- as.numeric(levels(result.table[, i]))[result.table[, i]]
     }
     
+    ## should we change Session to numeric (currently yes)?
+    #result.table$Session = as.numeric(result.table$Session)
   }
   else{
     result.table <- data.frame(matrix(NA, ncol = 9))

@@ -6,6 +6,9 @@
 #' 
 #' @return data frame containing the trade results of all stocks issues from every day 
 #'         available on the website. 
+#'         
+#' @details Notice that the first Session of all trade is 10, not 1. There is a Session 1
+#'          according to GSE website, but it's blank
 #'   
 #' @seealso  \link{download.stockIDs}
 #'   

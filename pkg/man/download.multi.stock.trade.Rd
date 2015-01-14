@@ -4,11 +4,13 @@
 \alias{download.multi.stock.trade}
 \title{Download Multiple Stocks Data from Georgian Stock Exchange Website}
 \usage{
-download.multi.stock.trade(ID)
+download.multi.stock.trade(ID, export = FALSE)
 }
 \arguments{
 \item{ID}{the data frame of stock IDs that we want trade results of.
-           The data frame should contain only one column of symbols}
+The data frame should contain only one column of symbols}
+
+\item{export}{boolean value of whether to export the data to a csv file}
 }
 \value{
 data frame containing the trade results of different stock issues from every day

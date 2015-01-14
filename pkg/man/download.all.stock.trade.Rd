@@ -4,7 +4,10 @@
 \alias{download.all.stock.trade}
 \title{Download All Stocks Data from Georgian Stock Exchange Website}
 \usage{
-download.all.stock.trade()
+download.all.stock.trade(export = FALSE)
+}
+\arguments{
+\item{export}{boolean value of whether to export the data to a csv file}
 }
 \value{
 data frame containing the trade results of all stocks issues from every day
@@ -12,6 +15,10 @@ data frame containing the trade results of all stocks issues from every day
 }
 \description{
 \code{download.all.stock.trade} returns a data frame of all stocks trade result
+}
+\details{
+Notice that the first Session of all trade is 10, not 1. There is a Session 1
+         according to GSE website, but it's blank
 }
 \examples{
 \dontrun{

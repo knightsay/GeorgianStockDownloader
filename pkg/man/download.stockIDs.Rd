@@ -4,7 +4,10 @@
 \alias{download.stockIDs}
 \title{Download Stock IDs from Georgian Stock Exchange Website}
 \usage{
-download.stockIDs()
+download.stockIDs(export = FALSE)
+}
+\arguments{
+\item{export}{boolean value of whether to export the data to a csv file}
 }
 \value{
 data frame containing the stock IDs and corresponding company names
