@@ -49,7 +49,7 @@ concordance=TRUE
 \tableofcontents
 
 \begin{abstract}
-The ``GeorgianStockParser'' package provides basic tools to download data of stock market in Republic of Georgia. Basic data organizing and analyzing tools are also offered.
+The \texttt{GeorgianStockParser} package provides basic tools to download data of stock market in Republic of Georgia. Basic data organizing and analyzing tools are also offered.
 \end{abstract}
 
 \section{Introduction}
@@ -63,7 +63,7 @@ The stock market in Georgia is still under development. Although the number of s
 To analyze the stock data in Republic of Georgia, we first have to get the data set. However, there are no available data sets to use, and GSE does not offer a downloadable data set. Therefore, we first have to create a stock data downloader.
 
 \subsection{Georgian Stock Exchange Website and Data}
-\label{sec:GSE}
+\label{subsec:GSE}
 
 The Georgian Stock Exchange website is still primary compared to the websites of stock exchange centers in more developed economics. On the website, there is no direct link to download the data. However, data of stock symbols and trade results are accessible after clicking into links.
 
@@ -74,7 +74,16 @@ The Georgian Stock Exchange website is still primary compared to the websites of
 \label{fig:AGVQ}
 \end{figure}
 
-Fortunately, the data for each stock ID are organized in an XML-accessible way. Therefore, we can use R and ``XML'' package to write a downloader of the stock data.
+Fortunately, the data for each stock ID are organized in an XML-accessible way. Therefore, we can use texttt{R} and \texttt{XML} package to write a downloader of the stock data.
+
+\subsection{Downloading Functions}
+\label{subsec:functions}
+There are four downloading functions: \texttt{download.stockIDs}, \texttt{download.single.stock.trade}, \texttt{download.multi.stock.trade}, and \texttt{download.all.stock.trade}. 
+
+\subsubsection{\texttt{download.stockIDs}}
+\label{sssec:download.stockIDs}
+
+
 
 <<echo = FALSE>>=
 ## run function here
