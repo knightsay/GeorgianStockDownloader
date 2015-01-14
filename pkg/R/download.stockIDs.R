@@ -16,6 +16,9 @@ download.stockIDs <- function(){
   
   names(stockIDs.table) <- c("Trade Symbol", "Name of JSC")
   
+  ## change factor to characters
+  stockIDs.table[, 1] <- levels(stockIDs.table[, 1])
+  
   ## notice that company name for TRAL is bad because of its quotation marks.
   ## no need to solve this now since we only need the stock symbols, not the company names
   

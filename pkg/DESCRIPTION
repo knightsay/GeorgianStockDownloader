@@ -1,7 +1,7 @@
-Package: CDS
-Version: 0.4-1
-Date: 2014-08-30
-Title: Credit Default Swap
+Package: GeorgianStockParser
+Version: 0.1
+Date: 2015-01-14
+Title: Georgian Stock Parser
 Author: c(person("Zijie", "Zhu", role = c("aut"),
     email = "Zijie.Zhu@Williams.edu"))
 Depends:

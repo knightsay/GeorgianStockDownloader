@@ -15,7 +15,9 @@
 #' download.multi.stock.trade(ID = stocks) 
 
 download.multi.stock.trade <- function(ID){
+  
   result.table = data.frame()
+  
   for(i in 1:length(ID[, 1])){
     temp <- download.single.stock.trade(ID = ID[i, 1])
     temp <- cbind(ID = ID[i, 1], temp)
