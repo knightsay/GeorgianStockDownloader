@@ -16,25 +16,14 @@
 \usepackage{float} 
 \usepackage[nottoc]{tocbibind}
 
+\usepackage{Sweave}
 \begin{document}
 
-<<include=FALSE, echo=FALSE>>=
-library(knitr)
-opts_chunk$set(
-echo = TRUE, results='markup', tidy=FALSE
-)
-@
 
 \bibliographystyle{abbrvnat}
 
-\SweaveOpts{concordance=TRUE}
+\input{GeorgianStockParser-concordance}
 
-<<include=FALSE, echo=FALSE>>=
-library(knitr)
-opts_chunk$set(
-concordance=TRUE
-)
-@
 
 \renewcommand\Authfont{\fontsize{12}{14.4}\selectfont}
 \renewcommand\Affilfont{\fontsize{9}{10.8}\itshape}
@@ -74,11 +63,7 @@ The Georgian Stock Exchange website is still primary compared to the websites of
 \label{fig:AGVQ}
 \end{figure}
 
-Fortunately, the data for each stock ID are organized in an XML-accessible way. Therefore, we can use R and ``XML'' package to write a downloader of the stock data.
 
-<<echo = FALSE>>=
-## run function here
-@
 
 \section{Conclusion}
 
