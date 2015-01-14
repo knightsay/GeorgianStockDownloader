@@ -1,0 +1,65 @@
+\documentclass[a4paper]{article}
+\linespread{1.5}
+\usepackage[round]{natbib}
+\usepackage{amssymb, amsmath}
+\usepackage{url, tikz}
+\usepackage{hyperref}
+\usepackage[sc]{mathpazo}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\geometry{verbose,tmargin=2.5cm,bmargin=2.5cm,lmargin=2.5cm,rmargin=2.5cm}
+\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{2}
+\usepackage{url}
+\usepackage[utf8]{inputenc}
+\usepackage{float} 
+\usepackage[nottoc]{tocbibind}
+
+\begin{document}
+
+<<include=FALSE, echo=FALSE>>=
+library(knitr)
+opts_chunk$set(
+echo = TRUE, results='markup', tidy=FALSE
+)
+@
+
+\bibliographystyle{abbrvnat}
+
+\SweaveOpts{concordance=TRUE}
+
+<<include=FALSE, echo=FALSE>>=
+library(knitr)
+opts_chunk$set(
+concordance=TRUE
+)
+@
+
+\title{\textbf{Parsing Georgian Stock Market Data}}
+\author{Zijie Zhu\thanks{\href{mailto:Zijie.Zhu@williams.edu}{Zijie.Zhu@williams.edu}}}
+\maketitle
+
+\setkeys{Gin}{width=0.95\textwidth}
+
+\tableofcontents
+
+\begin{abstract}
+The ``GeorgianStockParser'' package provides basic tools to download data of stock market in Republic of Georgia. Basic data organizing and analyzing tools are also offered.
+\end{abstract}
+
+\section{Introduction}
+\label{sec:Introduction}
+
+The stock market in Georgia is still under development. Although the number of stocks and the volume of trades are still relatively small compared with developed economics, Georgian stock market will eventually grow, and it is the right time to be interested, if not investing yet, in the market. This package aims to provide a few tools to download and analyze the Georgian stock market, and be used as a data set updater.
+
+
+<<echo = FALSE>>=
+## run function here
+@
+
+\section{Conclusion}
+
+In this paper, ...
+
+
+\end{document}
