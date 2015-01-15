@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.7.1)  14 JAN 2015 17:52
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.7.1)  15 JAN 2015 13:35
 entering extended mode
 **GeorgianStockParser.tex
 
@@ -1165,13 +1165,13 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 ("C:\work\Williams\Courses\WS_Georgia\Georgia Internship\GeorgianStockParser\pk
 g\vignettes\GeorgianStockParser.toc"
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 10.42007pt on input line 3.
+(Font)              scaled to size 10.42007pt on input line 4.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.91925pt on input line 3.
+(Font)              scaled to size 7.91925pt on input line 4.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 10.42007pt on input line 3.
+(Font)              scaled to size 10.42007pt on input line 4.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.91925pt on input line 3.
+(Font)              scaled to size 7.91925pt on input line 4.
 )
 \tf@toc=\write6
 LaTeX Font Info:    Try loading font information for T1+aett on input line 41.
@@ -1184,44 +1184,65 @@ File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
 <images/AGVQ.jpg, id=49, 1176.64594pt x 511.15968pt>
 File: images/AGVQ.jpg Graphic file (type jpg)
  <use images/AGVQ.jpg>
-Package pdftex.def Info: images/AGVQ.jpg used on input line 61.
+Package pdftex.def Info: images/AGVQ.jpg used on input line 56.
 (pdftex.def)             Requested size: 455.29924pt x 231.25987pt.
 
-
-LaTeX Font Warning: Font shape `T1/aett/bx/n' undefined
-(Font)              using `T1/aett/m/n' instead on input line 72.
+<images/stocks.jpg, id=50, 1189.44376pt x 511.15968pt>
+File: images/stocks.jpg Graphic file (type jpg)
+ <use images/stocks.jpg>
+Package pdftex.def Info: images/stocks.jpg used on input line 65.
+(pdftex.def)             Requested size: 455.29652pt x 231.25987pt.
 
 [2pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) 
 has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.83 \end{document}
-                    <C:/work/Williams/Courses/WS_Georgia/Georgia Internship/Geo
-rgianStockParser/pkg/vignettes/images/AGVQ.jpg>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 83.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 83.
+l.69 
+      <C:/work/Williams/Courses/WS_Georgia/Georgia Internship/GeorgianStockPars
+er/pkg/vignettes/images/AGVQ.jpg>]
+<images/sessions.jpg, id=56, 1175.89313pt x 511.15968pt>
+File: images/sessions.jpg Graphic file (type jpg)
+
+<use images/sessions.jpg>
+Package pdftex.def Info: images/sessions.jpg used on input line 74.
+(pdftex.def)             Requested size: 455.29503pt x 231.25987pt.
+ [3pdfTeX warning (ext4): destination with the same identifier (name{figure.2})
+ has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.81 \section
+             {Introducing GeorgianStockParser Package}pdfTeX warning (ext4): de
+stination with the same identifier (name{figure.3}) has been already used, dupl
+icate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.81 \section
+             {Introducing GeorgianStockParser Package} <C:/work/Williams/Course
+s/WS_Georgia/Georgia Internship/GeorgianStockParser/pkg/vignettes/images/stocks
+.jpg> <C:/work/Williams/Courses/WS_Georgia/Georgia Internship/GeorgianStockPars
+er/pkg/vignettes/images/sessions.jpg>] [4] [5] [6]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 206.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 206.
 
 ("C:\work\Williams\Courses\WS_Georgia\Georgia Internship\GeorgianStockParser\pk
 g\vignettes\GeorgianStockParser.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 83.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 83.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 206.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 206.
 Package rerunfilecheck Info: File `GeorgianStockParser.out' has not changed.
-(rerunfilecheck)             Checksum: 9BD0578F1EA10B0A0D0DDC55DC659578;312.
-
-
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 83.
+(rerunfilecheck)             Checksum: A64517861DB9D0CCD48AA73595EEB9FC;316.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 206.
  ) 
 Here is how much of TeX's memory you used:
- 18136 strings out of 493921
- 327694 string characters out of 3144874
- 380884 words of memory out of 3000000
- 21015 multiletter control sequences out of 15000+200000
- 61119 words of font info for 138 fonts, out of 3000000 for 9000
+ 18153 strings out of 493921
+ 327917 string characters out of 3144874
+ 385368 words of memory out of 3000000
+ 21023 multiletter control sequences out of 15000+200000
+ 61610 words of font info for 140 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 55i,8n,54p,551b,325s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 55i,8n,54p,874b,473s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C
 :/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/P
@@ -1229,13 +1250,14 @@ rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Prog
 ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program
  Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Fil
 es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files (
+x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsltt10.pfb><C:/Program Files (
 x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x8
 6)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti9.pfb><C:/Program Files (x86)/
 MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program Files (x86)/Mi
 KTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on GeorgianStockParser.pdf (2 pages, 380431 bytes).
+Output written on GeorgianStockParser.pdf (6 pages, 703614 bytes).
 PDF statistics:
- 96 PDF objects out of 1000 (max. 8388607)
- 11 named destinations out of 1000 (max. 500000)
- 62 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 122 PDF objects out of 1000 (max. 8388607)
+ 16 named destinations out of 1000 (max. 500000)
+ 72 words of extra memory for PDF output out of 10000 (max. 10000000)
 

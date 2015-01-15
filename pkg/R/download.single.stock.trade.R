@@ -2,7 +2,7 @@
 #' 
 #' \code{download.single.stock.trade} takes a stock ID and returns a data frame of its trade result
 #' 
-#' @param ID the single stock ID that we want trade results of
+#' @param ID character value of the single stock ID that we want trade results of
 #' @param export boolean value of whether to export the data to a csv file
 #'   
 #' @return data frame containing the trade results of different stock issues from every day 

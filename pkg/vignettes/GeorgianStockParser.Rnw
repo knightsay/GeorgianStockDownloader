@@ -51,19 +51,14 @@ concordance=TRUE
 \begin{abstract}
 The \texttt{GeorgianStockParser} package provides basic tools to download data of stock market in Republic of Georgia. Basic data organizing and analyzing tools are also offered.
 \end{abstract}
-
+\newpage
 \section{Introduction}
 \label{sec:Introduction}
 
-The stock market in Georgia is still under development. Although the number of stocks and the volume of trades are still relatively small compared with developed economics, Georgian stock market will eventually grow, and it is the right time to be interested, if not investing yet, in the market. This package aims to provide a few tools to download and analyze the Georgian stock market, and be used as a data set updater.
+The stock market in Georgia is still much under development. Although the number of stocks and the volume of trades are still relatively small compared with developed economics, Georgian stock market will eventually grow, and it is the right time to be interested, if not investing yet, in the market. This package aims to provide a few tools to download and analyze the Georgian stock market, and be used as a data set updater.
 
-\section{Stock Data Downloader}
-\label{sec:Downloader}
-
-To analyze the stock data in Republic of Georgia, we first have to get the data set. However, there are no available data sets to use, and GSE does not offer a downloadable data set. Therefore, we first have to create a stock data downloader.
-
-\subsection{Georgian Stock Exchange Website and Data}
-\label{subsec:GSE}
+\section{Georgian Stock Exchange Website and Data}
+\label{sec:GSE}
 
 The Georgian Stock Exchange website is still primary compared to the websites of stock exchange centers in more developed economics. On the website, there is no direct link to download the data. However, data of stock symbols and trade results are accessible after clicking into links.
 
@@ -74,20 +69,67 @@ The Georgian Stock Exchange website is still primary compared to the websites of
 \label{fig:AGVQ}
 \end{figure}
 
-Fortunately, the data for each stock ID are organized in an XML-accessible way. Therefore, we can use texttt{R} and \texttt{XML} package to write a downloader of the stock data.
+We can also view the list of registered stock symbols.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=6.3in, height=3.2in]{images/stocks.jpg}
+\caption{GSE data taken on Jan. 14th, 2015 of all registered stock symbols. Notice that no direct download link available.}
+\label{fig:stocks}
+\end{figure}
+
+In addition to viewing the trade result of each stock, we can view trades on every session. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=6.3in, height=3.2in]{images/sessions.jpg}
+\caption{GSE data taken on Jan. 14th, 2015 for ``all'' sessions of trading. However, as we see, the list is very uncomprehensive and the list ends on Dec. 5th, 2002. Therefore, it is very difficult for potential investors to follow the market, since daily update of stock trade results are not available. In addition, notice again that no direct download link is available.}
+\label{fig:sessions}
+\end{figure}
+
+Fortunately, all data on the website are organized in an XML-accessible way. Therefore, we can use \texttt{R} and \texttt{XML} package to write a downloader of the stock data.
+
+\section{Introducing GeorgianStockParser Package}
+\label{sec:package}
 
 \subsection{Downloading Functions}
 \label{subsec:functions}
-There are four downloading functions: \texttt{download.stockIDs}, \texttt{download.single.stock.trade}, \texttt{download.multi.stock.trade}, and \texttt{download.all.stock.trade}. 
+There are four downloading functions: \texttt{download.stockIDs}, \texttt{download.single.stock.trade}, \texttt{download.multi.stock.trade}, and \texttt{download.all.stock.trade}. For detailed usage, see relevant documentation.
 
-\subsubsection{\texttt{download.stockIDs}}
-\label{sssec:download.stockIDs}
+\texttt{download.stockIDs} scans the data from the webpage (see Figure \ref{fig:stocks}) and returns a data frame containing all the stock symbols and corresponding company names. The parameter \texttt{export} specifies whether to export the data frame to an \texttt{.csv} file (\texttt{export} defaultly set to \texttt{FALSE}).
 
-
-
-<<echo = FALSE>>=
-## run function here
+<<echo = TRUE>>=
+library(GeorgianStockParser)
+stocks <- download.stockIDs(export = FALSE)
+head(stocks)
+tail(stocks)
 @
+
+\texttt{download.single.stock.trade} scans the data from the webpage (see Figure \ref{fig:AGVQ}) and returns a data frame containing all the trade results of the stock. The parameter \texttt{ID} takes a character string of the stock symbol we want trade results of, and \texttt{export} means the same as previously.
+
+<<echo = TRUE>>=
+AGVQ <- download.single.stock.trade(ID = "AGVQ", export = FALSE)
+tail(AGVQ)
+@
+
+\texttt{download.multi.stock.trade} scans the data from the website and returns a data frame containing trade results of multiple stocks we specify. The parameter \texttt{ID} takes a data frame of the stock symbols we want trade results of, and \texttt{export} means the same as previously.
+
+<<echo = TRUE>>=
+multiID <- data.frame(ID = c("AGVQ", "VAZI"))
+multi <- download.multi.stock.trade(ID = multiID, export = FALSE)
+head(multi)
+tail(multi)
+@
+
+\texttt{download.all.stock.trade} scans the data from the website and returns a data frame containing all trade results of all registered stocks. The parameter \texttt{export} means the same as previously. This function can create a good sample for time-series analysis on Georgian stock market. All analyzing functions and results will be based on the \texttt{all} data set generated by this function.
+
+<<echo = TRUE>>=
+## all <- download.all.stock.trade(export = FALSE)
+## tail(all)
+## dim(all) ## the first number is the current number of trades that ever happened
+@
+
+There is still yet one more downloading function to add, which is \texttt{daily.update}. \texttt{daily.update} should take a \texttt{date} parameter of \texttt{Date} type, and download all the trade results that happen on that specified date. This function should be used as a survey tool of what happened after a specific event, say Russian-Georgian War in 2008. Or it can be used as a data set update function, since we don't want to slowly run \texttt{download.all.stock.trade} every time. The function can be most easily created by going into the ``All Session Report'' on GSE website, but since the website only contains data before 2003, we have to come up with a new way. Due to limited time availability on this project, I will not create this function, since with the \texttt{all} data set we can already start the analysis.
 
 \section{Conclusion}
 

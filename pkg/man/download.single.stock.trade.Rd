@@ -7,7 +7,7 @@
 download.single.stock.trade(ID, export = FALSE)
 }
 \arguments{
-\item{ID}{the single stock ID that we want trade results of}
+\item{ID}{character value of the single stock ID that we want trade results of}
 
 \item{export}{boolean value of whether to export the data to a csv file}
 }
