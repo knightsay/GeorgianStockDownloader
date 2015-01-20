@@ -8,7 +8,7 @@
 #' @param time take character string of either "Date" or "Session" to decide 
 #'        whether to use date or session as x-axis
 #' @param y determines what is the y-axis value; 
-#'        take character string of "Min. price" or "Max. price" or "Weighted avg. price" or "Weighted
+#'        take character string of "Min. price" or "Max.price" or "Weighted avg. price" or "Weighted
 #'        closing price" or "Volume in Securities" or "Volume in GEL"
 #'   
 #' @seealso  \link{download.single.stock.trade}
