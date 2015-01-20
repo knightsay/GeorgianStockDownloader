@@ -10,6 +10,13 @@
 # RStudio files
 .Rproj.user/
 
+# TeX files
+.log
+.synctex.gz
+.tex
+.toc
+.pdf
+
 # =========================
 # Operating System Files
 # =========================
